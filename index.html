@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Book Application</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1><i class="fa-solid fa-address-book"></i> Address book</h1>
+    </header>
+
+    <main>
+
+        <form  class="contact-form">
+            <fieldset>
+                <h2 class="form-heading">Contact Form</h2>
+            <label for="title">Title</label>
+            <select id="title" class="title" >
+                <option value="" disabled selected>Please Select</option>
+                <option value="mr">Mr</option>
+                <option value="mrs">Mrs</option>
+                <option value="other">Other</option>
+            </select><br>
+            
+
+          
+
+            <label for="name">Name: <span class="error error0" id="nameError"></span></label>
+            <input type="text" id="name" ><br>
+            
+
+            <label for="surname">Surname: <span class="error error1" id="surnameError"></span></label>
+            <input type="text" id="surname"   >
+            <br>
+
+            <label for="phonenumber">Phone Number: <span class="error error2" id="numberError"></span></label>
+            <input type="text" id="phonenumber" ><br>
+            
+
+            <label for="streetname">Address: <span class="error error3" id="streetError"></span></label>
+            <input type="text" id="streetname"  ><br>
+            
+
+            <label for="streetname2">Address Line 2(optional):</label>
+            <input type="text" id="streetname2" placeholder="" ><br>
+
+            <div class="flex-container">
+                <div>
+                    <label for="city">City: <span class="error error4" id="cityError"></span></label>
+                    <input type="text" id="city" placeholder="" >
+                    
+                </div>
+                <div>
+                    <label for="postcode">Postal Code: <span class="error error5" id="postcodeError"></span></label>
+            <input type="text" id="postcode" placeholder="" >
+            <br>
+              </div>
+                
+            </div>
+
+            
+
+            
+
+            <button type="submit" class="submit-form">Done</button>
+            <button  class="cancel-form">Cancel</button>
+            
+        </fieldset>
+
+    </form>
+
+
+
+        <div class="display">
+            <h2>My Contacts</h2>
+            
+    
+        <div class="search-container">
+            <span class="material-symbols-outlined">search
+            </span>
+        <input type="text" id ="search-bar" class="search-bar" placeholder="Search contacts name">
+
+    </div>
+
+
+    <button class="add-btn"><i class="fa-solid fa-plus"></i> Add</button>
+
+
+
+    
+        
+        <table>
+            <thead>
+                <tr>
+                    <th >Name</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Postal Code</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody class="contact-table">
+                <tr id="contact-1" class="grid-container">
+                    
+                    <td>John Smith</td>
+                    <td><span class="hide"><i class="fa-solid fa-phone"></i></span> 08103364209</td>
+                    <td>123 Baker Street</td>
+                    <td>London</td>
+                    <td>NW1 6XE</td>
+                    <td> 
+                        <button class="delete" for="contact-1"><i class="fa-solid fa-trash-can"></i> <span>Delete</span></button>
+                    </td>
+
+                </tr>
+                <tr id="contact-2">
+                    <td>John Doe</td>
+                    <td><span class="hide"><i class="fa-solid fa-phone"></i></span> 07945778362</td>
+                    <td>456 Elm Street</td>
+                    <td>Manchester</td>
+                    <td>M1 2AB</td>
+                    <td>
+                        <button class="delete" for="contact-2"><i class="fa-solid fa-trash-can"></i> <span>Delete</span></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+    <div class="totalContacts">
+          <h3></h3>
+
+    </div>
+
+
+
+    </main>
+
+    <footer>
+        <p> Made By Jamal Onanuga.</p>
+        <p>Contact: jamalona17@gmail.com</p>
+    </footer>
+
+
+ <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
